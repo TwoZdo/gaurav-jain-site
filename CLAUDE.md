@@ -38,31 +38,50 @@ You are working on a live client website. Two people edit it, each with their ow
   - Otherwise run `python3 -m http.server 4321` from the repo root.
 - The site is at http://localhost:4321.
 
-### 3. Making changes: localhost only
+### 3. Making changes: test, then a preview link
 
-- Edit the files and check the result on localhost. Show the user screenshots.
-- Check at a desktop width (1440px) and a phone width (390px).
-- Check that nothing scrolls sideways and that text keeps readable contrast.
-- Check that motion still works with "reduce motion" turned on.
-- When you change `styles.css` or `site.js`, bump the `?v=` number on their tags in `index.html`. Use the same number for both. This forces visitors' browsers to load the new files.
-- **Do not commit, push or deploy while working.** Stay on localhost until the user explicitly says to deploy, publish, push or go live.
+The user's rules: **test before anything is merged, always give a preview link, and make that link impossible to miss.**
 
-### 4. Deploying, only when the user says so
+- Never edit on `main`. Work on a preview branch: the session's own branch in a cloud session, or `preview/<short-name>` on your own computer.
+- Edit the files and test on localhost first:
+  - check at desktop (1440px) and phone (390px) widths;
+  - check nothing scrolls sideways and text keeps readable contrast;
+  - check motion with "reduce motion" turned on.
+- When you change `styles.css` or `site.js`, bump the `?v=` number on their tags in `index.html`. Use the same number for both, so visitors' browsers load the new files.
+- Commit to the preview branch and push it (`git push -u origin <branch>`). Never push to `main` at this stage. Vercel builds a preview for the branch; it does not touch the live site.
+- Wait for the build. The Vercel commit status on GitHub reports success or failure (`https://api.github.com/repos/angrynoodles591/gaurav-jain-site/commits/<sha>/status`).
+- Open the preview link and test the change there too.
+  - The link is `https://gaurav-jain-site-git-<branch, with / as ->-devesh-9360.vercel.app`.
+  - Previews are public, so no login is needed.
+- **Show the preview link to the user as a highlighted block, so they can't miss it.** Use this format:
 
-1. `git pull --rebase origin main`. If there are conflicts, resolve them, show the user and re-check on localhost.
-2. Run `git status` and `git diff --stat`. Make sure only the intended files changed. Never commit `.env*`, `.vercel/`, `.backup/` or `.impeccable/`; `.gitignore` already covers them.
-3. Commit with a clear message that says what changed and why.
-4. `git push origin main`.
-5. Wait about 30 to 60 seconds, then check the live site:
-   - `curl -s https://gaurav-jain-site.vercel.app/ | grep -o 'styles.css?v=[0-9]*'` should show the new version number.
-   - Spot-check the changed content in the live HTML or in a browser.
-6. Tell the user it's live, and what changed.
+  > ## 🔍 PREVIEW READY
+  > **https://…vercel.app**
+  > What changed: …  ·  Live site: not changed yet
+
+### 4. Deploying, only when the user says "deploy" or "publish"
+
+1. **Back up the live site first.** Tag the current `main` and push the tag, so any earlier version can be restored:
+   ```bash
+   git fetch origin main && git tag backup/$(date +%Y-%m-%d)-$(git rev-parse --short origin/main) origin/main && git push origin --tags
+   ```
+2. Bring the preview branch up to date with `git pull --rebase origin main`. If there are conflicts, resolve them, test again and give a new preview link.
+3. Run `git status` and `git diff --stat origin/main`. Make sure only the intended files changed. Never commit `.env*`, `.vercel/`, `.backup/` or `.impeccable/`; `.gitignore` covers them.
+4. Push the tested preview branch to `main`: `git push origin <branch>:main`.
+5. After about 30 to 60 seconds, check the live site:
+   - `curl -s https://gaurav-jain-site.vercel.app/ | grep -o 'styles.css?v=[0-9]*'` should show the new version;
+   - spot-check the changed content.
+6. **Tell the user it's published, as a highlighted block, so they can't miss it.** Use this format:
+
+   > ## ✅ PUBLISHED — LIVE NOW
+   > **https://gaurav-jain-site.vercel.app**
+   > What changed: …  ·  Backup of the previous version: `backup/…`
 
 If something goes wrong:
 
-- **Push rejected:** pull with rebase and push again. **Never force-push**, and never rewrite history on `main`.
-- **Vercel deploy shows "Blocked" or "Error":** tell the user. The project owner can see why in the Vercel dashboard. It may need the owner to upgrade Vercel to Pro, or to push the change themselves.
-- **Rolling back:** if the user wants to undo a deploy, `git revert <commit>` and push. Don't reset or delete commits.
+- **Push rejected:** pull with rebase and push again. **Never force-push**, and never rewrite history on `main` or delete backup tags.
+- **Vercel deploy shows "Blocked" or "Error":** tell the user, highlighted the same way. The project owner can see why in the Vercel dashboard.
+- **Rolling back:** if the user wants to undo a deploy, `git revert <commit>` and push, or restore from a `backup/…` tag with a new commit. Don't reset or delete commits.
 
 ## Design system: keep it
 
