@@ -434,3 +434,6 @@ Backup before this pass: .backup/*-v38c.*
 ## v43 — Warm light grounds
 - The user asked for no blue-white backgrounds "for now": light sections #F4EFE6 (warm off-white/beige), cards, header and logo strip #FFFCF7, chips/icon tiles/form panel #F8F3EA. The palette pale #E0EAF8 is unused for now. All text pairings re-checked (navy 13–14.6:1, muted 4.9–5.5:1, royal 9.9–11:1).
 - Backup: .backup/*-v42.*
+
+## v44 — Visible keyboard focus on dark sections
+- The global focus ring was navy, so it was invisible on the navy sections and the footer (and the book's royal ring was near-invisible on navy). Dark grounds now use cyan (#30D1FF, about 9:1 on navy); white cards inside dark sections keep the navy ring. No new colours.

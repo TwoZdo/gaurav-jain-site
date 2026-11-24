@@ -486,3 +486,7 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .cred { --hb: var(--white); --hex: var(--hex-light); }
 .band--navy { --hb: var(--ink); --hex: var(--hex-dark); }
 .foot { --hb: var(--deep); --hex: var(--hex-dark); }
+
+/* v44: visible keyboard focus on dark grounds. The global navy ring vanished on navy sections and the footer. */
+.band--navy :focus-visible, .foot :focus-visible { outline-color: var(--accent-lt); }
+.band--navy .card:not(.card--ink) :focus-visible { outline-color: var(--ink); }
