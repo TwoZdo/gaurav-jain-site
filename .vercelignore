@@ -10,3 +10,5 @@ assets/signature.webp
 .env*
 .vercel
 README.md
+CLAUDE.md
+SETUP.md

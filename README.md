@@ -2,6 +2,8 @@
 
 Static site: `index.html`, `styles.css`, `site.js` and `assets/`. No build step, no framework.
 
+**New here?** Start with [`SETUP.md`](SETUP.md). Claude Code follows [`CLAUDE.md`](CLAUDE.md) automatically.
+
 Live: https://gaurav-jain-site.vercel.app
 
 ## Publishing
