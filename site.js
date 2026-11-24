@@ -95,7 +95,7 @@
     };
     new IntersectionObserver(([e]) => {
       clearInterval(timer);
-      if (e.isIntersecting) timer = setInterval(tick, 2600);
+      if (e.isIntersecting) timer = setInterval(tick, +dial.dataset.dial || 2600);
     }).observe(dial);
   });
 

@@ -437,3 +437,6 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v44 — Visible keyboard focus on dark sections
 - The global focus ring was navy, so it was invisible on the navy sections and the footer (and the book's royal ring was near-invisible on navy). Dark grounds now use cyan (#30D1FF, about 9:1 on navy); white cards inside dark sections keep the navy ring. No new colours.
+
+## v45 — Faster header role word
+- The Professor / Author / Advisor word in the header now changes every 1.5s (was 2.6s), with a quicker slide (0.35–0.4s). The other two rotating words keep their pace. Still off with reduced motion.

@@ -490,3 +490,6 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 /* v44: visible keyboard focus on dark grounds. The global navy ring vanished on navy sections and the footer. */
 .band--navy :focus-visible, .foot :focus-visible { outline-color: var(--accent-lt); }
 .band--navy .card:not(.card--ink) :focus-visible { outline-color: var(--ink); }
+
+/* v45: the header role word (Professor / Author / Advisor) turns faster: every 1.5s instead of 2.6s, with a quicker slide. */
+.brand-role .face { transition-duration: .35s, .4s; }
