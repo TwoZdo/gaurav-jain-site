@@ -1,0 +1,11 @@
+# Only the site itself is uploaded: index.html, styles.css, site.js, assets/
+.backup
+.claude
+.impeccable
+stage-src
+DESIGN.md
+PRODUCT.md
+assets/stage
+assets/signature.webp
+.env*
+.vercel

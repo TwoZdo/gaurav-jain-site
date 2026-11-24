@@ -1,0 +1,8 @@
+# secrets and local Vercel link (each person runs `vercel link` themselves)
+.vercel
+.env*
+
+# local-only working files
+.backup/
+.impeccable/
+.DS_Store
