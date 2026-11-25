@@ -522,3 +522,6 @@ Backup before this pass: .backup/*-v38c.*
 - `api/contact.js` now also posts each submission to a Google Apps Script web app (`tools/google-sheet-script.gs`), which appends a row to a "Submissions" tab: Date, Name, Email, Organization, Interested in, Message, and an empty "Status / notes" column for follow-up.
 - Turned on by `SHEET_URL` and `SHEET_TOKEN` in Vercel; the script rejects posts without the matching token, and stops text from being treated as a spreadsheet formula.
 - Email and sheet run side by side: the visitor sees "sent" if either worked, and the error with the email address only if both failed or neither is set up.
+
+## v62 — Thank-you card after the contact form
+- After a successful send, the Get in Touch form is replaced in the same box by a card: deep-green tick (--green-ink #1F7A3F, about 5:1; bright --green is too faint as an icon), "Thank you for reaching out!", the received/appreciate line, and a muted "within 2 business days" note (client wording). The box keeps up to 480px of its height so the page does not lurch; focus moves to the card for screen readers. Errors keep the form and show the message as before.

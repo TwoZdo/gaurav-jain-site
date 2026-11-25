@@ -184,9 +184,15 @@
       fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
         .then((r) => r.json().catch(() => ({})).then((j) => {
           if (r.ok && j.ok) {
-            status.className = 'form-status';
-            status.textContent = 'Thank you. Your message has been sent, and Dr. Jain will be in touch soon.';
+            // v62: swap the form for the thank-you card in the same box; hold some of the box's height so the
+            // page doesn't lurch (capped, so a long phone form doesn't leave a tall empty box), then show the card
+            const done = form.querySelector('.form-done');
+            form.style.minHeight = Math.min(form.offsetHeight, 480) + 'px';
             form.reset();
+            form.classList.add('is-done');
+            done.hidden = false;
+            done.focus({ preventScroll: true });
+            done.scrollIntoView({ block: 'nearest', behavior: motion ? 'smooth' : 'auto' });
           } else if (j.error === 'invalid') {
             status.className = 'form-status err';
             status.textContent = 'Please check your name and email.';
