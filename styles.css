@@ -540,3 +540,6 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .talk-formats { display: grid; gap: 8px; width: 100%; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.16); }
 .talk-formats .mono { color: var(--yellow); }
 .talk-formats-list { font: 500 clamp(1.05rem, 1.3vw, 1.2rem)/1.45 var(--sans); letter-spacing: -.01em; color: var(--on-dark); }
+
+/* v52: second quote, at the foot of "Who I Work With", in the same style as the first. */
+.who-quote { margin-top: clamp(56px, 7vw, 104px); }

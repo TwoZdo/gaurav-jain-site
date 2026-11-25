@@ -468,3 +468,7 @@ Backup before this pass: .backup/*-v38c.*
 - Speaking now uses the client's text: the lead "Fresh perspectives on marketing, positioning, and growth in financial services.", two paragraphs, and a static "Available formats" line (Keynotes · Executive Workshops · Guest Lectures · Leadership Sessions). The rotating formats dial is gone.
 - The button is green "Invite Dr. Jain to Speak" (was orange "Discuss a Workshop").
 - The photo is now the portrait with the book (`portrait-book.webp`), so the NYU Stern lecture photo appears only once, in "Who I Work With". Hard edges, as before.
+
+## v52 — Second quote, new session titles
+- A second quote from the client ("In financial services, the challenge is rarely just creating value…") sits at the foot of "Who I Work With", just before Speaking, in the same style as the first quote. It replaces the quote that was in the removed Framework section. It stays inside the light section so the dark/light alternation holds.
+- Signature Sessions now use the client's titles: Money, Marketed · Beyond Performance · The Trust Equation, each with its subtitle. The old one-line descriptions were dropped because they described the previous sessions.
