@@ -33,7 +33,7 @@
     // hero: stage photo settles, headline rises word by word, lead, intro and actions follow
     const hero = document.querySelector('.hero');
     const hh = document.querySelector('.hero-h'); split(hh); mark(hh, 'words', 150);
-    $$('.hero-lead, .hero-intro, .hero-actions').forEach((c, x) => mark(c, 'rise', 550, x));
+    $$('.hero-lead, .hero-intro, .hero-cred, .hero-actions').forEach((c, x) => mark(c, 'rise', 550, x));
 
     // sections: script accent writes in, headings rise word by word, intros and cards follow
     $$('.cred-row').forEach((el, x) => mark(el, 'rise', 0, x));
@@ -99,7 +99,7 @@
     }).observe(dial);
   });
 
-  /* ---------- 3D book: spins on its own, drag (or arrow keys) to turn it; spin resumes from wherever it is left ---------- */
+  /* ---------- 3D book (inactive since v47: the book is held still; add data-book back to the scene to restore): spins on its own, drag (or arrow keys) to turn it; spin resumes from wherever it is left ---------- */
   const scene = document.querySelector('[data-book]');
   if (scene) {
     const book = scene.querySelector('.book3d');

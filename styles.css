@@ -504,3 +504,14 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
   -webkit-mask-composite: source-in;
   mask: linear-gradient(to right, transparent, #000 22%, #000 85%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 78%, transparent);
   mask-composite: intersect; }
+
+/* v47: hero credentials line, the quote that replaced the "Seen at" logos, and a still book. */
+.hero-lead em { font-weight: 600; }
+.hero-cred { margin-top: 14px; max-width: 42em; color: var(--on-dark-2); font-size: 14px; line-height: 1.6; }
+.hero-cred cite { font-style: normal; }
+.cred-quote { margin: 0 auto; max-width: 52rem; text-align: center; }
+.cred-quote blockquote { margin: 0; }
+.cred-quote p { font: 600 clamp(1.25rem, 2.2vw, 1.75rem)/1.4 var(--sans); letter-spacing: -.015em; color: var(--ink); text-wrap: balance; }
+.cred-quote figcaption { margin-top: 14px; color: var(--mute); font-size: 15px; }
+.book3d-scene { cursor: default; }
+.book3d-floor { animation: none !important; }

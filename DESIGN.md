@@ -445,3 +445,8 @@ Backup before this pass: .backup/*-v38c.*
 - Menu is now About · Advisory · Speaking · The Book. Advisory links to the products/expertise section (#products) for now.
 - The header and hero calls to action are bright green `--green` #2BD46B with navy text (about 7.5:1; white on this green fails contrast) and say "Schedule a Call". They still go to the inquiry form. Other buttons stay orange.
 - The hero photo now fades into the navy on all four sides instead of ending at hard edges. This is the client's explicit exception to the "no fades on photos" rule, and applies to the hero photo only.
+
+## v47 — New hero text, quote strip, still book
+- Hero text is now the client's wording: "The Marketing of Financial Products." / "Positioning. Communications. Growth." (periwinkle) / the advisory paragraph / a small credentials line (RPI · Money, Marketed · Advisor to Financial-Services Firms).
+- The light strip under the hero now holds Dr. Jain's quote ("A great financial product is only half the story…") instead of the "Seen at" logos. Still a light section, so the dark/light alternation holds.
+- The book no longer spins or turns on drag; it holds its three-quarter angle. The spin code in site.js is kept but inactive (it only runs if the scene has `data-book`).

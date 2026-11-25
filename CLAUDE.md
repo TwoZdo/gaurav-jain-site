@@ -89,9 +89,9 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 
 **Layout**
 - Sections strictly alternate dark and light. The order is:
-  hero (dark) → "Seen at" logos (light) → book (dark) → about (light) → products (dark) → framework (light) → speaking and sessions (dark) → invite (light) → footer (dark).
+  hero (dark) → quote (light) → book (dark) → about (light) → products (dark) → framework (light) → speaking and sessions (dark) → invite (light) → footer (dark).
   If you add or remove a section, keep the alternation.
-- Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams.
+- Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams. The book in the book section stays still (no spinning, no dragging).
 
 **Colours**
 
@@ -112,7 +112,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 
 **Type**
 - Inter for everything.
-- The handwritten script (Mrs Saint Delafield, class `scr`) is used **only** as the first word of section titles and the "Seen at" label. Nowhere else.
+- The handwritten script (Mrs Saint Delafield, class `scr`) is used **only** as the first word of section titles. Nowhere else.
 - **No monospace fonts.** Small uppercase labels use the `.mono` class, which is Inter with spaced-out capitals.
 
 **Photos**
@@ -138,7 +138,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
   - the LinkedIn link,
   - `[Email Address]` in the footer.
   Replace them only with real values the user gives you.
-- The "Seen at" logos (RPI, NYU Stern, Nasdaq) are real affiliations. Don't add others without the user confirming them.
+- The "Seen at" logo strip (RPI, NYU Stern, Nasdaq) was replaced by Dr. Jain's quote in v47. The logo files are still in `assets/logos/`; they are real affiliations, so don't add others without the user confirming them.
 
 ## Files
 
