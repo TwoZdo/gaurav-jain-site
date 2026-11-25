@@ -89,7 +89,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 
 **Layout**
 - Sections strictly alternate dark and light. The order is:
-  hero (dark) → quote (light) → book (dark) → who I work with (light, `#who`) → speaking and sessions (dark) → industry advisory (warm white, `#advisory`) → quote (dark) → invite (light) → footer (dark).
+  hero (dark) → quote (light) → book (dark) → who I work with (light, `#who`) → speaking and sessions (dark) → industry advisory with the third quote at its foot (warm white, `#advisory`) → research (dark, `#research`) → invite (light) → footer (dark).
   The warm-white strips (first quote, industry advisory) count as light.
   If you add or remove a section, keep the alternation.
 - Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams. The book in the book section stays still (no spinning, no dragging).
@@ -105,7 +105,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 | Cyan `#30D1FF` | Marks and script words on dark sections |
 | Periwinkle `#A3A9F5` | Highlighted words in the hero |
 | Orange `#D73D0D` | Buttons only, always with **white** text. This is the client's orange `#F25929` deepened so white text passes contrast. |
-| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book", "Explore Synergies", "Invite Dr. Jain to Speak" (Speaking) and the form's "Let’s Connect" buttons only, always with **navy** text. |
+| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book", "Explore Synergies", "Invite Dr. Jain to Speak" (Speaking), "Explore Academic Research & Publications" (Research) and the form's "Let’s Connect" buttons only, always with **navy** text. |
 | Muted text `#5F6496` | Secondary text |
 | Footer `#111A4C` | Footer background |
 
@@ -134,7 +134,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 ## Content rules
 
 - Never invent testimonials, statistics, client logos, awards or quotes. Use only facts the user provides.
-- Contact details from the client: email `jain@yellowfryum.com` (footer "Contact") and LinkedIn https://www.linkedin.com/in/gauravjainrpi. No placeholders are left.
+- Contact details from the client: email `jain@yellowfryum.com` (footer "Contact") and LinkedIn https://www.linkedin.com/in/gauravjainrpi (also the target of the Research button). No placeholders are left.
 - The firm logos in Industry Advisory (`assets/logos/advisory/`) are firms Dr. Jain has advised, supplied by the client. They were cut from a small screenshot; replace them with the original files when the client sends them. Don't add others without the client confirming them.
 - The "Seen at" logo strip (RPI, NYU Stern, Nasdaq) was replaced by Dr. Jain's quote in v47. The logo files are still in `assets/logos/`; they are real affiliations, so don't add others without the user confirming them.
 

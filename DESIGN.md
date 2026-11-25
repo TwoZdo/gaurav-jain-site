@@ -500,3 +500,9 @@ Backup before this pass: .backup/*-v38c.*
 - A short navy quote strip ("Not every financial professional needs to market a product…") now separates Industry Advisory (warm white) and the invite (off-white), so the dark/light alternation holds all the way down.
 - The Speaking heading is now "*Speaking* Engagements" with "Speaking" in script, at the normal section-title size (the extra-large size made it wrap badly).
 - On phones, titles with a script word get more line spacing so the script doesn't run into the line below.
+
+## v58 — Research & Academic Contributions
+- New navy section "*Research* & Academic Contributions" (`#research`) as the last section before the form. The client's three paragraphs on the left, with the Investor Behavior Lab at RPI and The Washington Post in bold; on the right three outlined fact tiles drawn only from that text (Investor Behavior Lab, peer-reviewed research, in the media).
+- The green "Explore Academic Research & Publications →" button opens Dr. Jain's LinkedIn in a new tab.
+- The navy quote strip from v57 is gone: its quote ("Not every financial professional…") now sits at the foot of Industry Advisory in the same style as the other quotes, and Research takes over as the dark band between Advisory and the invite.
+- Menu: Research added (The Book · Who I Work With · Speaking · Advisory · Research). Between 961 and 1180px the role word next to the name is hidden and the spacing tightens so all five links fit; previously the first link was hidden there.

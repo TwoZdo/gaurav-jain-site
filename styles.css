@@ -397,7 +397,8 @@ main, .foot { position: relative; z-index: 1; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
-  .nav a:not(.btn):nth-child(1) { display: none; }
+  /* v58: five links now; keep them all and drop the role word and some spacing instead */
+  .brand-role { display: none; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 960px) {
@@ -587,8 +588,19 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .hero-h .scr { font-size: 1.35em; top: .1em; margin: 0 .12em 0 .04em; }
 
 /* v57: navy quote strip between Industry Advisory and the invite, so light and dark alternate again. */
-.quote-band { position: relative; padding: clamp(56px, 7vw, 104px) 0; }
-.quote-band .cred-quote p { color: var(--on-dark); }
-.quote-band .cred-quote figcaption { color: var(--on-dark-2); }
 #talks-h { margin-bottom: 22px; }
 @media (max-width: 760px) { .h2:has(> .scr) { line-height: 1.3; } }
+
+/* v58: the third quote moves to the foot of Industry Advisory; Research becomes the navy section before the invite. */
+.adv .wrap + .wrap { display: block; }
+.adv-quote { margin-top: clamp(56px, 7vw, 104px); }
+.res { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; }
+.res-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+#research-h { margin-bottom: 22px; }
+.res-copy strong { color: var(--on-dark); font-weight: 600; }
+.res-facts { display: grid; gap: 14px; }
+.res-facts li { display: flex; gap: 16px; align-items: flex-start; padding: 22px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--r); color: var(--on-dark-2); font-size: 15px; line-height: 1.45; }
+.res-facts b { display: block; color: var(--on-dark); font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.res-facts .sym { width: 32px; height: 32px; flex: none; stroke: var(--yellow); }
+@media (max-width: 960px) { .res { grid-template-columns: 1fr; } }
+@media (min-width: 961px) and (max-width: 1180px) { .nav { gap: 20px; } .nav a:not(.btn) { font-size: 14.5px; } .nav-cta { padding: 10px 14px; } }
