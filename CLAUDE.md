@@ -89,7 +89,8 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 
 **Layout**
 - Sections strictly alternate dark and light. The order is:
-  hero (dark) → quote (light) → book (dark) → who I work with (light, `#advisory`) → speaking and sessions (dark) → invite (light) → footer (dark).
+  hero (dark) → quote (light) → book (dark) → who I work with (light, `#who`) → speaking and sessions (dark) → industry advisory (warm white, `#advisory`) → invite (light) → footer (dark).
+  The warm-white strips (quote, industry advisory) count as light; advisory → invite is the one light-to-light step, separated by the change from warm white to off-white.
   If you add or remove a section, keep the alternation.
 - Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams. The book in the book section stays still (no spinning, no dragging).
 
@@ -137,6 +138,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
   - the LinkedIn link,
   - `[Email Address]` in the footer.
   Replace them only with real values the user gives you.
+- The firm logos in Industry Advisory (`assets/logos/advisory/`) are firms Dr. Jain has advised, supplied by the client. They were cut from a small screenshot; replace them with the original files when the client sends them. Don't add others without the client confirming them.
 - The "Seen at" logo strip (RPI, NYU Stern, Nasdaq) was replaced by Dr. Jain's quote in v47. The logo files are still in `assets/logos/`; they are real affiliations, so don't add others without the user confirming them.
 
 ## Files

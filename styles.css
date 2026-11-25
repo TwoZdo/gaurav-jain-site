@@ -451,7 +451,7 @@ main, .foot { position: relative; z-index: 1; }
 .hero .split-photo { aspect-ratio: auto; height: min(76svh, 760px); }
 .hero .split-photo img { object-position: 50% 38%; }
 .band--talks .split-photo img { object-position: 50% 30%; }
-#advisory { padding-bottom: calc(var(--sec) + 60px); }
+#who { padding-bottom: calc(var(--sec) + 60px); }
 .skyline { left: var(--gut); width: min(520px, 40%); }
 .sess-h { margin-top: var(--sec); }
 .hero .hero-h { font-size: clamp(2.4rem, min(3.9vw, 7.4vh), 4.6rem); }
@@ -475,7 +475,7 @@ main, .foot { position: relative; z-index: 1; }
   --hex-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86.6' height='150' viewBox='0 0 86.6 150'%3E%3Cpath d='M0 25L86.6 75M86.6 25L0 75M43.3 0V100' fill='none' stroke='%2316215B' stroke-opacity='0.05'/%3E%3Cpath d='M43.3 0L86.6 25V75L43.3 100L0 75V25ZM43.3 100V150' fill='none' stroke='%2316215B' stroke-opacity='0.13'/%3E%3Cg fill='%2316215B' fill-opacity='0.12'%3E%3Ccircle cx='43.3' cy='0' r='2.6'/%3E%3Ccircle cx='86.6' cy='25' r='2.6'/%3E%3Ccircle cx='86.6' cy='75' r='2.6'/%3E%3Ccircle cx='43.3' cy='100' r='2.6'/%3E%3Ccircle cx='0' cy='75' r='2.6'/%3E%3Ccircle cx='0' cy='25' r='2.6'/%3E%3Ccircle cx='43.3' cy='150' r='2.6'/%3E%3C/g%3E%3Ccircle cx='43.3' cy='50' r='3.6' fill='%2316215B' fill-opacity='0.06'/%3E%3C/svg%3E");
   --hex-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86.6' height='150' viewBox='0 0 86.6 150'%3E%3Cpath d='M0 25L86.6 75M86.6 25L0 75M43.3 0V100' fill='none' stroke='%23FFFFFF' stroke-opacity='0.04'/%3E%3Cpath d='M43.3 0L86.6 25V75L43.3 100L0 75V25ZM43.3 100V150' fill='none' stroke='%23FFFFFF' stroke-opacity='0.1'/%3E%3Cg fill='%23FFFFFF' fill-opacity='0.12'%3E%3Ccircle cx='43.3' cy='0' r='2.6'/%3E%3Ccircle cx='86.6' cy='25' r='2.6'/%3E%3Ccircle cx='86.6' cy='75' r='2.6'/%3E%3Ccircle cx='43.3' cy='100' r='2.6'/%3E%3Ccircle cx='0' cy='75' r='2.6'/%3E%3Ccircle cx='0' cy='25' r='2.6'/%3E%3Ccircle cx='43.3' cy='150' r='2.6'/%3E%3C/g%3E%3Ccircle cx='43.3' cy='50' r='3.6' fill='%23FFFFFF' fill-opacity='0.06'/%3E%3C/svg%3E");
 }
-body, .cred, .band--navy, .foot {
+body, .cred, .adv, .band--navy, .foot {
   background:
     radial-gradient(70% 66% at 50% 48%, var(--hb) 28%, transparent 100%) fixed,
     var(--hex) 0 0 / 86.6px 150px fixed,
@@ -483,7 +483,7 @@ body, .cred, .band--navy, .foot {
     var(--hb);
 }
 body { --hb: var(--paper); --hex: var(--hex-light); }
-.cred { --hb: var(--white); --hex: var(--hex-light); }
+.cred, .adv { --hb: var(--white); --hex: var(--hex-light); }
 .band--navy { --hb: var(--ink); --hex: var(--hex-dark); }
 .foot { --hb: var(--deep); --hex: var(--hex-dark); }
 
@@ -527,7 +527,7 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .who-h .sym { width: 22px; height: 22px; flex: none; stroke: var(--yellow); stroke-width: 1.8; }
 .who-list li { position: relative; padding: 6px 0 6px 22px; font-size: 14.5px; color: var(--ink-2); }
 .who-list li::before { content: ""; position: absolute; left: 3px; top: 11px; width: 8px; height: 4px; border-left: 1.6px solid var(--yellow); border-bottom: 1.6px solid var(--yellow); transform: rotate(-45deg); }
-#advisory .who .split-photo img { object-position: 50% 30%; }
+#who .who .split-photo img { object-position: 50% 30%; }
 @media (max-width: 760px) { .who-grid { grid-template-columns: 1fr; } }
 /* the hero's edge fade, reusable: the photo melts into whatever ground is behind it */
 .photo-melt { background: none; border-radius: 0;
@@ -543,3 +543,14 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 
 /* v52: second quote, at the foot of "Who I Work With", in the same style as the first. */
 .who-quote { margin-top: clamp(56px, 7vw, 104px); }
+
+/* v53: Industry Advisory, a warm-white section between Speaking (dark) and the invite (off-white). Copy left, firm logos right. */
+.adv .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; }
+.adv-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.adv-label { color: var(--mute); margin-bottom: 14px; }
+.adv-logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.adv-logos li { display: flex; align-items: center; justify-content: center; min-height: 96px; padding: 14px; background: var(--paper); border-radius: var(--r); }
+.adv-logos img { width: auto; max-width: 100%; height: auto; max-height: 60px; }
+@media (max-width: 960px) { .adv .wrap { grid-template-columns: 1fr; } }
+@media (min-width: 520px) and (max-width: 960px) { .adv-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.adv-copy .h2 { margin-bottom: 22px; }

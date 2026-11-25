@@ -472,3 +472,9 @@ Backup before this pass: .backup/*-v38c.*
 ## v52 — Second quote, new session titles
 - A second quote from the client ("In financial services, the challenge is rarely just creating value…") sits at the foot of "Who I Work With", just before Speaking, in the same style as the first quote. It replaces the quote that was in the removed Framework section. It stays inside the light section so the dark/light alternation holds.
 - Signature Sessions now use the client's titles: Money, Marketed · Beyond Performance · The Trust Equation, each with its subtitle. The old one-line descriptions were dropped because they described the previous sessions.
+
+## v53 — Industry Advisory section with firm logos
+- New section after Speaking: "Industry Advisory", the client's copy on the left and the ten firms Dr. Jain has advised on the right (Sortis Capital, Sarda Capital, Lancaster, Days Global Advisors, AdvisorHub, Yieldstreet, AKRU, Energia, Alternative Advisers, Cartera) as tiles in two columns (three on tablets).
+- Warm white ground (like the quote strip), so it reads as a light band between dark Speaking and the off-white invite.
+- The logos were cut from the client's screenshot (about 120px wide each) with the white background made transparent. They're shown at about their native size; swap in the originals when available.
+- The menu's Advisory link now goes here (`#advisory`); "Who I Work With" moved to `#who`.
