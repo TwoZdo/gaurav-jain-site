@@ -89,7 +89,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 
 **Layout**
 - Sections strictly alternate dark and light. The order is:
-  hero (dark) → quote (light) → book (dark) → who I work with (light, `#about`) → products (dark) → framework (light) → speaking and sessions (dark) → invite (light) → footer (dark).
+  hero (dark) → quote (light) → book (dark) → who I work with (light, `#advisory`) → speaking and sessions (dark) → invite (light) → footer (dark).
   If you add or remove a section, keep the alternation.
 - Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams. The book in the book section stays still (no spinning, no dragging).
 

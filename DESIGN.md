@@ -458,3 +458,8 @@ Backup before this pass: .backup/*-v38c.*
 - The light section after the book (`#about`) now shows the client's "Who I Work With" content: four sector cards (Asset & Wealth Management, Fintech & Financial Platforms, Banking & Insurance, Private Capital & Advisory) in a 2×2 grid, and a green "Explore Synergies" button to the inquiry form.
 - The NYU Stern lecture photo sits on the right and fades into the off-white ground, like the hero photo (new reusable class `photo-melt`). On phones the cards come first, then the photo.
 - The previous About copy (bio, facts, signature, portrait with the book) was removed; `assets/portrait-book.webp` is kept.
+
+## v50 — Products and Framework sections removed
+- Removed the "From Everyday Banking to Sophisticated Investments" products section (with the "Different products. Different customers." card) and the "Beyond the Product: Three Questions That Matter" framework section, at the client's request.
+- The dark/light alternation still holds: who I work with (light) → speaking (dark) → invite (light).
+- "Who I Work With" now has the id `#advisory`; the menu's Advisory link goes there, and About goes to the top of the page (the hero carries the bio line now). The footer links follow the same mapping. Their CSS and site.js code is left in place, unused.

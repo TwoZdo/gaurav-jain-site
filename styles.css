@@ -450,9 +450,8 @@ main, .foot { position: relative; z-index: 1; }
 .split-photo figcaption { position: absolute; left: 14px; bottom: 14px; background: var(--white); color: var(--ink); padding: 8px 12px; border-radius: 4px; }
 .hero .split-photo { aspect-ratio: auto; height: min(76svh, 760px); }
 .hero .split-photo img { object-position: 50% 38%; }
-#about .split-photo img { object-position: 35% 20%; }
 .band--talks .split-photo img { object-position: 50% 40%; }
-#about { padding-bottom: calc(var(--sec) + 60px); }
+#advisory { padding-bottom: calc(var(--sec) + 60px); }
 .skyline { left: var(--gut); width: min(520px, 40%); }
 .sess-h { margin-top: var(--sec); }
 .hero .hero-h { font-size: clamp(2.4rem, min(3.9vw, 7.4vh), 4.6rem); }
@@ -528,7 +527,7 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .who-h .sym { width: 22px; height: 22px; flex: none; stroke: var(--yellow); stroke-width: 1.8; }
 .who-list li { position: relative; padding: 6px 0 6px 22px; font-size: 14.5px; color: var(--ink-2); }
 .who-list li::before { content: ""; position: absolute; left: 3px; top: 11px; width: 8px; height: 4px; border-left: 1.6px solid var(--yellow); border-bottom: 1.6px solid var(--yellow); transform: rotate(-45deg); }
-#about .who .split-photo img { object-position: 50% 30%; }
+#advisory .who .split-photo img { object-position: 50% 30%; }
 @media (max-width: 760px) { .who-grid { grid-template-columns: 1fr; } }
 /* the hero's edge fade, reusable: the photo melts into whatever ground is behind it */
 .photo-melt { background: none; border-radius: 0;
