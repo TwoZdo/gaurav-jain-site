@@ -453,3 +453,8 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v48 — Book button goes to Amazon
 - "Explore the Book" is now bright green like "Schedule a Call" and opens the book's Amazon page in a new tab. That placeholder is resolved; the LinkedIn link and email are still placeholders.
+
+## v49 — "Who I Work With" replaces the About copy
+- The light section after the book (`#about`) now shows the client's "Who I Work With" content: four sector cards (Asset & Wealth Management, Fintech & Financial Platforms, Banking & Insurance, Private Capital & Advisory) in a 2×2 grid, and a green "Explore Synergies" button to the inquiry form.
+- The NYU Stern lecture photo sits on the right and fades into the off-white ground, like the hero photo (new reusable class `photo-melt`). On phones the cards come first, then the photo.
+- The previous About copy (bio, facts, signature, portrait with the book) was removed; `assets/portrait-book.webp` is kept.
