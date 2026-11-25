@@ -134,10 +134,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 ## Content rules
 
 - Never invent testimonials, statistics, client logos, awards or quotes. Use only facts the user provides.
-- These items are still **placeholders**, waiting on the client:
-  - the LinkedIn link,
-  - `[Email Address]` in the footer.
-  Replace them only with real values the user gives you.
+- Contact details from the client: email `jain@yellowfryum.com` (footer "Contact") and LinkedIn https://www.linkedin.com/in/gauravjainrpi. No placeholders are left.
 - The firm logos in Industry Advisory (`assets/logos/advisory/`) are firms Dr. Jain has advised, supplied by the client. They were cut from a small screenshot; replace them with the original files when the client sends them. Don't add others without the client confirming them.
 - The "Seen at" logo strip (RPI, NYU Stern, Nasdaq) was replaced by Dr. Jain's quote in v47. The logo files are still in `assets/logos/`; they are real affiliations, so don't add others without the user confirming them.
 

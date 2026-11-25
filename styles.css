@@ -554,3 +554,15 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 @media (max-width: 960px) { .adv .wrap { grid-template-columns: 1fr; } }
 @media (min-width: 520px) and (max-width: 960px) { .adv-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .adv-copy .h2 { margin-bottom: 22px; }
+
+/* v54: "and many more" under the firm logos; a simple one-row footer (name, three links, copyright). */
+.adv-more { margin-top: 14px; text-align: center; color: var(--mute); font-size: 15px; font-style: italic; }
+.foot { padding: clamp(28px, 3vw, 40px) 0; }
+.foot-row { display: flex; align-items: center; justify-content: space-between; gap: 20px 40px; flex-wrap: wrap; }
+.foot-name { font: 600 18px/1.2 var(--sans); letter-spacing: -.01em; }
+.foot-role { margin-top: 4px; color: var(--on-dark-2); font-size: 14px; }
+.foot-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.foot-links a { text-decoration: none; font-weight: 500; font-size: 15px; }
+.foot-links a:hover { color: var(--yellow); }
+.foot-copy { color: var(--on-dark-2); font-size: 14px; }
+@media (max-width: 760px) { .foot-row { flex-direction: column; align-items: flex-start; } }

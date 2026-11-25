@@ -478,3 +478,8 @@ Backup before this pass: .backup/*-v38c.*
 - Warm white ground (like the quote strip), so it reads as a light band between dark Speaking and the off-white invite.
 - The logos were cut from the client's screenshot (about 120px wide each) with the white background made transparent. They're shown at about their native size; swap in the originals when available.
 - The menu's Advisory link now goes here (`#advisory`); "Who I Work With" moved to `#who`.
+
+## v54 — Simple footer, new menu, "and many more"
+- Footer replaced with one simple row on navy: name and "Professor · Author · Advisor" on the left; Contact (mailto jain@yellowfryum.com), LinkedIn (new tab) and Speaking in the middle; "© 2026 Gaurav Jain" on the right. On phones it stacks. The big "GAURAV JAIN" wordmark, signature and link columns are gone. The email and LinkedIn placeholders are resolved.
+- Menu is now Book · Who I Work With · Speaking · Advisory, plus the green "Schedule a Call" button to the form.
+- "and many more" under the firm logos.
