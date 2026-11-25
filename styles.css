@@ -17,6 +17,7 @@
   --line-2: rgba(22, 33, 91, .08);
   --accent: #D73D0D;           /* palette orange #F25929, deepened in the same hue so white text passes: 4.6:1 */
   --on-accent: #FFFFFF;
+  --green: #2BD46B;            /* bright green: the "Schedule a Call" buttons only, with navy text (about 7.5:1) */
   --yellow: #1F299C;           /* royal: marks on light grounds */
   --accent-lt: #30D1FF;        /* cyan: marks on dark grounds */
   --soft: #A3A9F5;             /* periwinkle: hero highlights */
@@ -493,3 +494,13 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 
 /* v45: the header role word (Professor / Author / Advisor) turns faster: every 1.5s instead of 2.6s, with a quicker slide. */
 .brand-role .face { transition-duration: .35s, .4s; }
+
+/* v46: "Schedule a Call" buttons are bright green with navy text (white on bright green fails contrast). */
+.btn--green, .band--navy .btn--green { background: var(--green); color: var(--ink); --sweep: var(--white); }
+.btn--green:hover, .btn--green:focus-visible { color: var(--ink); }
+/* v46: the hero photo melts into the navy instead of ending at hard edges (client request). */
+.hero .split-photo { background: none; border-radius: 0;
+  -webkit-mask: linear-gradient(to right, transparent, #000 22%, #000 85%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 78%, transparent);
+  -webkit-mask-composite: source-in;
+  mask: linear-gradient(to right, transparent, #000 22%, #000 85%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 78%, transparent);
+  mask-composite: intersect; }

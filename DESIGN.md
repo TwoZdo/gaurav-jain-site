@@ -440,3 +440,8 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v45 — Faster header role word
 - The Professor / Author / Advisor word in the header now changes every 1.5s (was 2.6s), with a quicker slide (0.35–0.4s). The other two rotating words keep their pace. Still off with reduced motion.
+
+## v46 — Client changes: menu, green "Schedule a Call", hero photo fade
+- Menu is now About · Advisory · Speaking · The Book. Advisory links to the products/expertise section (#products) for now.
+- The header and hero calls to action are bright green `--green` #2BD46B with navy text (about 7.5:1; white on this green fails contrast) and say "Schedule a Call". They still go to the inquiry form. Other buttons stay orange.
+- The hero photo now fades into the navy on all four sides instead of ending at hard edges. This is the client's explicit exception to the "no fades on photos" rule, and applies to the hero photo only.

@@ -104,6 +104,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 | Cyan `#30D1FF` | Marks and script words on dark sections |
 | Periwinkle `#A3A9F5` | Highlighted words in the hero |
 | Orange `#D73D0D` | Buttons only, always with **white** text. This is the client's orange `#F25929` deepened so white text passes contrast. |
+| Bright green `#2BD46B` | "Schedule a Call" buttons (header and hero) only, always with **navy** text. |
 | Muted text `#5F6496` | Secondary text |
 | Footer `#111A4C` | Footer background |
 
@@ -116,7 +117,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 
 **Photos**
 - Each photo is a standalone picture in a two-column `.split` layout: hard edges, small radius.
-- No gradients, fades, overlays or colour filters on photos.
+- No gradients, fades, overlays or colour filters on photos. Exception the client asked for: the hero photo fades into the navy at its edges.
 
 **Effects**
 - No blur on or behind text: no `filter: blur`, and no frosted or `backdrop-filter` surfaces.
