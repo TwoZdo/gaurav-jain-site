@@ -604,3 +604,8 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .res-facts .sym { width: 32px; height: 32px; flex: none; stroke: var(--yellow); }
 @media (max-width: 960px) { .res { grid-template-columns: 1fr; } }
 @media (min-width: 961px) and (max-width: 1180px) { .nav { gap: 20px; } .nav a:not(.btn) { font-size: 14.5px; } .nav-cta { padding: 10px 14px; } }
+
+/* v61: spam trap field, hidden from people; bots that fill it are ignored. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status a { color: inherit; }
+.form [type="submit"]:disabled { opacity: .7; cursor: progress; }

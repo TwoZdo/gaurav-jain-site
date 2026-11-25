@@ -171,9 +171,29 @@
         bad[0].focus();
         return;
       }
-      status.className = 'form-status';
-      status.textContent = 'Thank you. Your inquiry is ready to send once the form is connected.';
-      form.reset();
+      // v61: send to the Vercel function (api/contact.js), which emails it through Resend
+      const btn = form.querySelector('[type="submit"]');
+      const label = btn.querySelector('span');
+      const data = Object.fromEntries(new FormData(form));
+      btn.disabled = true; label.textContent = 'Sending…';
+      status.className = 'form-status'; status.textContent = '';
+      const fail = () => {
+        status.className = 'form-status err';
+        status.innerHTML = 'Sorry, your message could not be sent. Please email <a href="mailto:jain@yellowfryum.com">jain@yellowfryum.com</a> instead.';
+      };
+      fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        .then((r) => r.json().catch(() => ({})).then((j) => {
+          if (r.ok && j.ok) {
+            status.className = 'form-status';
+            status.textContent = 'Thank you. Your message has been sent, and Dr. Jain will be in touch soon.';
+            form.reset();
+          } else if (j.error === 'invalid') {
+            status.className = 'form-status err';
+            status.textContent = 'Please check your name and email.';
+          } else fail();
+        }))
+        .catch(fail)
+        .finally(() => { btn.disabled = false; label.textContent = 'Let’s Connect'; });
     });
   }
 })();

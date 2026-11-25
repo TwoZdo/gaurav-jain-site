@@ -2,7 +2,7 @@
 
 You are working on a live client website. Two people edit it, each with their own Claude Code. Follow this file exactly.
 
-- **What it is:** a static site with `index.html`, `styles.css`, `site.js` and `assets/`. There is no build step, no framework and no package install.
+- **What it is:** a static site with `index.html`, `styles.css`, `site.js` and `assets/`, plus one Vercel serverless function, `api/contact.js`, that emails the contact form through Resend. There is no build step, no framework and no package install.
 - **Live URL:** https://gaurav-jain-site.vercel.app
 - **Repo:** https://github.com/angrynoodles591/gaurav-jain-site
 - **Hosting:** Vercel is connected to this repo. **A push to `main` goes live within about a minute.** A push to any other branch gets its own preview URL and does not touch the live site.
@@ -143,6 +143,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 | Path | What it is |
 |---|---|
 | `index.html`, `styles.css`, `site.js`, `assets/` | The live site |
+| `api/contact.js` | Receives the "Get in Touch" form and emails it via Resend. Needs `RESEND_API_KEY` in the Vercel project's environment variables (optional: `CONTACT_TO`, `CONTACT_FROM`). Never put the key in the repo. Without it, the form shows an error with the email address instead. |
 | `DESIGN.md` | Design history and rules. Add a short entry when you make a meaningful design change. |
 | `PRODUCT.md` | Who the site is for and what it must do |
 | `README.md`, `SETUP.md`, `CLAUDE.md` | Docs. Kept off the live site by `.vercelignore`. |

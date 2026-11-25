@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2018">
+  <link rel="stylesheet" href="styles.css?v=2019">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -284,7 +284,7 @@
             <p class="band-p">Sessions can be tailored to the audience, industry, and objectives of each organization.</p>
           </div>
 
-          <!-- shortcut: no backend yet; submit only validates and confirms. Wire to a form service / the builder's form later. -->
+          <!-- v61: submits to /api/contact (api/contact.js), which emails the message through Resend -->
           <form class="form" novalidate aria-labelledby="form-h">
             <h3 class="form-title" id="form-h">Get in Touch</h3>
             <div class="field-row">
@@ -302,6 +302,7 @@
                 <label><input type="radio" name="interest" value="Other"><span>Other</span></label>
               </div>
             </fieldset>
+            <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
             <label class="fld"><span>Message <em>(optional)</em></span><textarea name="msg" rows="3" placeholder="Tell me a little about what you have in mind…"></textarea></label>
             <button class="btn btn--green btn--block" type="submit"><span>Let’s Connect</span><svg class="btn-ic btn-ic--send" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 9.5L17.5 3l-5 14.5-3-6z"/><path d="M9.5 11.5l8-8.5"/></svg></button>
             <p class="form-status" role="status" aria-live="polite"></p>
@@ -326,6 +327,6 @@
     </div>
   </footer>
 
-  <script src="site.js?v=2018" defer></script>
+  <script src="site.js?v=2019" defer></script>
 </body>
 </html>

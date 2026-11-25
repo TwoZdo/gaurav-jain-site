@@ -512,3 +512,8 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v60 (reverted) — Mr Dafoe tried and dropped
 - The script font was switched to Mr Dafoe for a preview, and the client preferred Mrs Saint Delafield. Back to Mrs Saint Delafield at the original size and tilt.
+
+## v61 — The contact form sends email (Vercel + Resend)
+- New `api/contact.js` (Vercel serverless function) receives the form and emails it to jain@yellowfryum.com through Resend, with the visitor's email as reply-to and the subject "Website inquiry from <name> (<interest>)".
+- Needs `RESEND_API_KEY` set in the Vercel project's environment variables. Until then, and if sending ever fails, the form says so and points to jain@yellowfryum.com instead of pretending it worked.
+- A hidden spam-trap field (`website`) silently drops bot submissions. The button shows "Sending…" while it works.
