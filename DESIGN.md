@@ -509,3 +509,6 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v59 — Header role word twice as fast
 - Professor / Author / Advisor in the header now changes every 0.75s (was 1.5s), with a 0.18–0.2s slide (was 0.35–0.4s). Still off with reduced motion; hidden below 1180px.
+
+## v60 (reverted) — Mr Dafoe tried and dropped
+- The script font was switched to Mr Dafoe for a preview, and the client preferred Mrs Saint Delafield. Back to Mrs Saint Delafield at the original size and tilt.
