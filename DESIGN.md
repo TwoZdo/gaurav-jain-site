@@ -517,3 +517,8 @@ Backup before this pass: .backup/*-v38c.*
 - New `api/contact.js` (Vercel serverless function) receives the form and emails it to jain@yellowfryum.com through Resend, with the visitor's email as reply-to and the subject "Website inquiry from <name> (<interest>)".
 - Needs `RESEND_API_KEY` set in the Vercel project's environment variables. Until then, and if sending ever fails, the form says so and points to jain@yellowfryum.com instead of pretending it worked.
 - A hidden spam-trap field (`website`) silently drops bot submissions. The button shows "Sending…" while it works.
+
+## v62 — Form submissions also go to a Google Sheet
+- `api/contact.js` now also posts each submission to a Google Apps Script web app (`tools/google-sheet-script.gs`), which appends a row to a "Submissions" tab: Date, Name, Email, Organization, Interested in, Message, and an empty "Status / notes" column for follow-up.
+- Turned on by `SHEET_URL` and `SHEET_TOKEN` in Vercel; the script rejects posts without the matching token, and stops text from being treated as a spreadsheet formula.
+- Email and sheet run side by side: the visitor sees "sent" if either worked, and the error with the email address only if both failed or neither is set up.
