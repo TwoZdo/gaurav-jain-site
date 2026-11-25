@@ -493,7 +493,7 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .band--navy .card:not(.card--ink) :focus-visible { outline-color: var(--ink); }
 
 /* v45: the header role word (Professor / Author / Advisor) turns faster: every 1.5s instead of 2.6s, with a quicker slide. */
-.brand-role .face { transition-duration: .35s, .4s; }
+.brand-role .face { transition-duration: .18s, .2s; }
 
 /* v46: "Schedule a Call" buttons are bright green with navy text (white on bright green fails contrast). */
 .btn--green, .band--navy .btn--green { background: var(--green); color: var(--ink); --sweep: var(--white); }

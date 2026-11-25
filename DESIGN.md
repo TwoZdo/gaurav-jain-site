@@ -506,3 +506,6 @@ Backup before this pass: .backup/*-v38c.*
 - The green "Explore Academic Research & Publications →" button opens Dr. Jain's LinkedIn in a new tab.
 - The navy quote strip from v57 is gone: its quote ("Not every financial professional…") now sits at the foot of Industry Advisory in the same style as the other quotes, and Research takes over as the dark band between Advisory and the invite.
 - Menu: Research added (The Book · Who I Work With · Speaking · Advisory · Research). Between 961 and 1180px the role word next to the name is hidden and the spacing tightens so all five links fit; previously the first link was hidden there.
+
+## v59 — Header role word twice as fast
+- Professor / Author / Advisor in the header now changes every 0.75s (was 1.5s), with a 0.18–0.2s slide (was 0.35–0.4s). Still off with reduced motion; hidden below 1180px.
