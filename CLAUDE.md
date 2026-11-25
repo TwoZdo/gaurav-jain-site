@@ -104,7 +104,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 | Cyan `#30D1FF` | Marks and script words on dark sections |
 | Periwinkle `#A3A9F5` | Highlighted words in the hero |
 | Orange `#D73D0D` | Buttons only, always with **white** text. This is the client's orange `#F25929` deepened so white text passes contrast. |
-| Bright green `#2BD46B` | "Schedule a Call" buttons (header and hero) only, always with **navy** text. |
+| Bright green `#2BD46B` | "Schedule a Call" buttons (header and hero) and "Explore the Book" only, always with **navy** text. |
 | Muted text `#5F6496` | Secondary text |
 | Footer `#111A4C` | Footer background |
 
@@ -134,7 +134,6 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 
 - Never invent testimonials, statistics, client logos, awards or quotes. Use only facts the user provides.
 - These items are still **placeholders**, waiting on the client:
-  - the "Explore the Book" link (`data-placeholder` in `index.html`),
   - the LinkedIn link,
   - `[Email Address]` in the footer.
   Replace them only with real values the user gives you.

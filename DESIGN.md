@@ -450,3 +450,6 @@ Backup before this pass: .backup/*-v38c.*
 - Hero text is now the client's wording: "The Marketing of Financial Products." / "Positioning. Communications. Growth." (periwinkle) / the advisory paragraph / a small credentials line (RPI · Money, Marketed · Advisor to Financial-Services Firms).
 - The light strip under the hero now holds Dr. Jain's quote ("A great financial product is only half the story…") instead of the "Seen at" logos. Still a light section, so the dark/light alternation holds.
 - The book no longer spins or turns on drag; it holds its three-quarter angle. The spin code in site.js is kept but inactive (it only runs if the scene has `data-book`).
+
+## v48 — Book button goes to Amazon
+- "Explore the Book" is now bright green like "Schedule a Call" and opens the book's Amazon page in a new tab. That placeholder is resolved; the LinkedIn link and email are still placeholders.

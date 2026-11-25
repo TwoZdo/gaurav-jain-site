@@ -515,3 +515,6 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .cred-quote figcaption { margin-top: 14px; color: var(--mute); font-size: 15px; }
 .book3d-scene { cursor: default; }
 .book3d-floor { animation: none !important; }
+
+/* v48: "Explore the Book" is green and goes to Amazon; screen-reader-only helper for the "opens in a new tab" note. */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
