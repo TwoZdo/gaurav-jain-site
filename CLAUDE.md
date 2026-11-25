@@ -89,8 +89,8 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 
 **Layout**
 - Sections strictly alternate dark and light. The order is:
-  hero (dark) → quote (light) → book (dark) → who I work with (light, `#who`) → speaking and sessions (dark) → industry advisory (warm white, `#advisory`) → invite (light) → footer (dark).
-  The warm-white strips (quote, industry advisory) count as light; advisory → invite is the one light-to-light step, separated by the change from warm white to off-white.
+  hero (dark) → quote (light) → book (dark) → who I work with (light, `#who`) → speaking and sessions (dark) → industry advisory (warm white, `#advisory`) → quote (dark) → invite (light) → footer (dark).
+  The warm-white strips (first quote, industry advisory) count as light.
   If you add or remove a section, keep the alternation.
 - Keep it simple: no carousels, no auto-advancing sliders, no interactive diagrams. The book in the book section stays still (no spinning, no dragging).
 

@@ -495,3 +495,8 @@ Backup before this pass: .backup/*-v38c.*
 - The "See talks & workshops" link under the hero button is removed.
 - The Speaking photo (portrait with the book) now fades into the navy at its edges (`photo-melt`).
 - The form button says "Let’s Connect" (green).
+
+## v57 — Navy quote between Advisory and the invite; "Speaking Engagements"
+- A short navy quote strip ("Not every financial professional needs to market a product…") now separates Industry Advisory (warm white) and the invite (off-white), so the dark/light alternation holds all the way down.
+- The Speaking heading is now "*Speaking* Engagements" with "Speaking" in script, at the normal section-title size (the extra-large size made it wrap badly).
+- On phones, titles with a script word get more line spacing so the script doesn't run into the line below.

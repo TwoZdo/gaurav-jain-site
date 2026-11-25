@@ -585,3 +585,10 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 
 /* v56: script word in the hero headline ("Marketing"), sized for the large h1. */
 .hero-h .scr { font-size: 1.35em; top: .1em; margin: 0 .12em 0 .04em; }
+
+/* v57: navy quote strip between Industry Advisory and the invite, so light and dark alternate again. */
+.quote-band { position: relative; padding: clamp(56px, 7vw, 104px) 0; }
+.quote-band .cred-quote p { color: var(--on-dark); }
+.quote-band .cred-quote figcaption { color: var(--on-dark-2); }
+#talks-h { margin-bottom: 22px; }
+@media (max-width: 760px) { .h2:has(> .scr) { line-height: 1.3; } }
