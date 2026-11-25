@@ -155,6 +155,7 @@
     const msg = form.querySelector('[name="msg"]');
     document.querySelectorAll('[data-session]').forEach((a) => a.addEventListener('click', () => {
       if (!msg.value.trim()) msg.value = 'Interested in the session “' + a.dataset.session + '”. ';
+      const pick = form.querySelector('[name="interest"][value="Speaking or keynote"]'); if (pick) pick.checked = true;
       setTimeout(() => form.querySelector('[name="name"]').focus({ preventScroll: true }), motion ? 700 : 0);
     }));
 
@@ -166,7 +167,7 @@
       const bad = [...form.querySelectorAll('[required]')].filter((i) => !check(i));
       if (bad.length) {
         status.className = 'form-status err';
-        status.textContent = bad.some((i) => i.type === 'email' && i.value) ? 'That email address looks incomplete.' : 'Please add your name and work email.';
+        status.textContent = bad.some((i) => i.type === 'email' && i.value) ? 'That email address looks incomplete.' : 'Please add your name and email.';
         bad[0].focus();
         return;
       }

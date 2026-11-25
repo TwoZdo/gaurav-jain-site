@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2011">
+  <link rel="stylesheet" href="styles.css?v=2012">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -36,7 +36,7 @@
         <span class="brand-role mono" aria-hidden="true"><span class="dial" data-dial="1500"><span class="drum"><span class="face">Professor</span><span class="face">Author</span><span class="face">Advisor</span></span></span></span>
       </a>
       <nav class="nav" id="nav" aria-label="Main">
-        <a href="#book">Book</a>
+        <a href="#book">The Book</a>
         <a href="#who">Who I Work With</a>
         <a href="#talks">Speaking</a>
         <a href="#advisory">Advisory</a>
@@ -245,33 +245,41 @@
       <div class="wrap">
         <div class="invite card">
           <div class="invite-main">
-            <h2 class="h2" id="invite-h"><span class="scr">Invite</span> Dr. Jain to Your Organization</h2>
-            <p class="sec-note">For banks, credit unions, asset managers, insurers, fintech firms, private equity portfolios, industry associations, and executive education programs.</p>
-            <ul class="checks">
-              <li>Speaking Engagements</li>
-              <li>Employee Learning &amp; Development</li>
-              <li>Executive Workshops</li>
-            </ul>
+            <h2 class="h2" id="invite-h"><span class="scr">Bring</span> Dr. Jain to Your Organization</h2>
+            <p class="invite-lead">Fresh perspectives on financial-product marketing, positioning, communications, and growth.</p>
+            <p class="band-p">From industry conferences and executive education programs to private investor gatherings and leadership workshops, Dr. Jain delivers research-informed sessions grounded in real-world financial-services experience.</p>
+            <div class="invite-for">
+              <p class="band-p">His sessions are designed for:</p>
+              <ul class="checks">
+                <li><b>Banks, fintechs, and financial-services firms</b> — Leadership sessions, team workshops, and professional development.</li>
+                <li><b>Asset managers, wealth managers, and family offices</b> — Investor education, client events, and private gatherings.</li>
+                <li><b>Private equity and venture capital firms</b> — Marketing, positioning, and growth workshops for portfolio companies.</li>
+                <li><b>Industry associations and business schools</b> — Keynotes, guest lectures, and executive education programs.</li>
+              </ul>
+            </div>
+            <p class="band-p">Sessions can be tailored to the audience, industry, and objectives of each organization.</p>
           </div>
 
           <!-- shortcut: no backend yet; submit only validates and confirms. Wire to a form service / the builder's form later. -->
           <form class="form" novalidate aria-labelledby="form-h">
-            <h3 class="mono form-h" id="form-h">Speaking inquiry</h3>
+            <h3 class="form-title" id="form-h">Get in Touch</h3>
             <div class="field-row">
-              <label class="fld"><span>Name</span><input name="name" autocomplete="name" required></label>
-              <label class="fld"><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
+              <label class="fld"><span>Name</span><input name="name" autocomplete="name" placeholder="Your name" required></label>
+              <label class="fld"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="Your email" required></label>
             </div>
-            <label class="fld"><span>Organization</span><input name="org" autocomplete="organization"></label>
+            <label class="fld"><span>Organization <em>(optional)</em></span><input name="org" autocomplete="organization" placeholder="Company or institution"></label>
             <fieldset class="fld">
               <legend>I’m interested in</legend>
-              <div class="seg">
-                <label><input type="radio" name="format" value="Speaking engagement" checked><span>Speaking</span></label>
-                <label><input type="radio" name="format" value="Employee learning & development"><span>Employee L&amp;D</span></label>
-                <label><input type="radio" name="format" value="Executive workshop"><span>Executive workshop</span></label>
+              <div class="pick">
+                <label><input type="radio" name="interest" value="Speaking or keynote"><span>Speaking or keynote</span></label>
+                <label><input type="radio" name="interest" value="Executive workshop"><span>Executive workshop</span></label>
+                <label><input type="radio" name="interest" value="Advisory or consulting"><span>Advisory or consulting</span></label>
+                <label><input type="radio" name="interest" value="Research collaboration"><span>Research collaboration</span></label>
+                <label><input type="radio" name="interest" value="Other"><span>Other</span></label>
               </div>
             </fieldset>
-            <label class="fld"><span>About the event <em>(optional)</em></span><textarea name="msg" rows="3" placeholder="Audience, date, location"></textarea></label>
-            <button class="btn btn--yellow btn--block" type="submit"><span>Invite Dr. Jain to Speak</span><svg class="btn-ic btn-ic--send" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 9.5L17.5 3l-5 14.5-3-6z"/><path d="M9.5 11.5l8-8.5"/></svg></button>
+            <label class="fld"><span>Message <em>(optional)</em></span><textarea name="msg" rows="3" placeholder="Tell me a little about what you have in mind…"></textarea></label>
+            <button class="btn btn--green btn--block" type="submit"><span>Send Message</span><svg class="btn-ic btn-ic--send" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 9.5L17.5 3l-5 14.5-3-6z"/><path d="M9.5 11.5l8-8.5"/></svg></button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -294,6 +302,6 @@
     </div>
   </footer>
 
-  <script src="site.js?v=2011" defer></script>
+  <script src="site.js?v=2012" defer></script>
 </body>
 </html>

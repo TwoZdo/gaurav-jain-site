@@ -481,5 +481,11 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v54 — Simple footer, new menu, "and many more"
 - Footer replaced with one simple row on navy: name and "Professor · Author · Advisor" on the left; Contact (mailto jain@yellowfryum.com), LinkedIn (new tab) and Speaking in the middle; "© 2026 Gaurav Jain" on the right. On phones it stacks. The big "GAURAV JAIN" wordmark, signature and link columns are gone. The email and LinkedIn placeholders are resolved.
-- Menu is now Book · Who I Work With · Speaking · Advisory, plus the green "Schedule a Call" button to the form.
+- Menu is now The Book · Who I Work With · Speaking · Advisory, plus the green "Schedule a Call" button to the form.
 - "and many more" under the firm logos.
+
+## v55 — "Bring Dr. Jain to Your Organization" and the "Get in Touch" form
+- The invite section uses the client's copy: heading (script "Bring"), a bold lead, an intro paragraph, "His sessions are designed for:" with four audiences (bold name — what they get), and a closing line.
+- The form is now "Get in Touch": Name and Email (required), Organization (optional), "I'm interested in" as a vertical list of five round radio options (Speaking or keynote, Executive workshop, Advisory or consulting, Research collaboration, Other; none preselected), and an optional Message. The button is green "Send Message". "Discuss this session" links still pre-fill the message and now also tick "Speaking or keynote".
+- The form still has no backend: it validates and shows a thank-you, but nothing is sent yet.
+- Menu: "Book" renamed "The Book".
