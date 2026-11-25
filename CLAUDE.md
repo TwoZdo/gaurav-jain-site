@@ -113,7 +113,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 
 **Type**
 - Inter for everything.
-- The handwritten script (Mr Dafoe since v60, class `scr`) is used **only** as the first word of section titles, plus "Marketing" in the hero headline. Nowhere else.
+- The handwritten script (Mrs Saint Delafield, class `scr`) is used **only** as the first word of section titles, plus "Marketing" in the hero headline. Nowhere else.
 - **No monospace fonts.** Small uppercase labels use the `.mono` class, which is Inter with spaced-out capitals.
 
 **Photos**

@@ -309,8 +309,8 @@ main, .foot { position: relative; z-index: 1; }
 
 /* ================= v35: banded layout =================
    rhythm: navy photo hero → white credentials → navy book → photo about → paper products → navy framework → photo speaking → paper sessions + invite.
-   Every section heading opens with one handwritten accent word (Mr Dafoe since v60, was Mrs Saint Delafield). */
-:root { --scr-font: "Mr Dafoe", "Snell Roundhand", cursive; --navy-hi: #1F299C; }
+   Every section heading opens with one handwritten accent word (Mrs Saint Delafield, the family of his signature). */
+:root { --scr-font: "Mrs Saint Delafield", "Snell Roundhand", cursive; --navy-hi: #1F299C; }
 .scr { display: inline-block; position: relative; top: .14em; margin-right: .16em; font: 400 1.6em/0 var(--scr-font); letter-spacing: 0; color: var(--oxblood); transform: rotate(-5deg); }
 .band--navy .scr { color: var(--yellow); }
 .sec-h { text-align: center; max-width: 17em; margin: 0 auto clamp(36px, 4vw, 64px); }
@@ -604,8 +604,3 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .res-facts .sym { width: 32px; height: 32px; flex: none; stroke: var(--yellow); }
 @media (max-width: 960px) { .res { grid-template-columns: 1fr; } }
 @media (min-width: 961px) and (max-width: 1180px) { .nav { gap: 20px; } .nav a:not(.btn) { font-size: 14.5px; } .nav-cta { padding: 10px 14px; } }
-
-/* v60: Mr Dafoe replaces Mrs Saint Delafield. It is far heavier and taller at the same size, so the script word is scaled down
-   and tilted less (the face already slants). */
-.scr { font-size: 1.2em; top: .06em; margin-right: .2em; transform: rotate(-3deg); }
-.hero-h .scr { font-size: 1.05em; top: .04em; margin: 0 .16em 0 .06em; }
