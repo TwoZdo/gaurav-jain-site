@@ -615,6 +615,7 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .form.is-done { align-content: center; }
 .form.is-done > :not(.form-done) { display: none; }
 .form-done { display: grid; justify-items: center; gap: 12px; text-align: center; padding: clamp(8px, 2vw, 24px) 0; outline: none; }
+.form-done[hidden] { display: none; }   /* the display above would otherwise override the hidden attribute and show the card before any send */
 .form-done-ic { width: 40px; height: 40px; fill: none; stroke: var(--green-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 4px; }
 .form-done-h { font: 600 clamp(1.25rem, 1.6vw, 1.5rem)/1.25 var(--sans); letter-spacing: -.02em; color: var(--ink); }
 .form-done-p { max-width: 34em; font-size: 16.5px; line-height: 1.55; color: var(--ink); }
