@@ -8,6 +8,13 @@
 //                   "Gaurav Jain website <contact@yellowfryum.com>" once that domain is verified in Resend.
 //   SHEET_URL       the Google Apps Script web-app URL (turns on the sheet; script in tools/google-sheet-script.gs)
 //   SHEET_TOKEN     the shared secret that script checks, so only this site can add rows
+//   CONTACT_CONFIRM optional: set to "off" to stop the thank-you email to the visitor (on by default)
+//
+// The visitor confirmation is best-effort: if it fails, the inquiry has still been delivered and the
+// visitor still sees "sent". With Resend's test sender it only reaches the Resend account's own address,
+// so it starts working for real visitors once CONTACT_FROM uses a verified domain.
+// It never repeats the visitor's message and uses only a plain first name, so the form can't be used
+// to send someone else's text to a stranger's inbox.
 
 const TO = process.env.CONTACT_TO || 'jain@yellowfryum.com';
 const FROM = process.env.CONTACT_FROM || 'Gaurav Jain website <onboarding@resend.dev>';
@@ -31,6 +38,40 @@ async function sendEmail(f) {
       reply_to: f.email,
       subject: `Website inquiry from ${f.name}${f.interest ? ` (${f.interest})` : ''}`,
       text,
+      html,
+    }),
+  });
+  if (!r.ok) throw new Error(`Resend ${r.status}: ${await r.text()}`);
+}
+
+// Thank-you note to the visitor. Fixed wording only: a plain first name (letters, hyphens, apostrophes)
+// or "there", never their message, links or organization.
+async function sendConfirmation(f) {
+  const first = f.name.split(/\s+/)[0];
+  const hi = /^[\p{L}'’-]{1,40}$/u.test(first) ? first : 'there';
+  // wording supplied by the client (2026-11-25)
+  const lines = [
+    `Hi ${hi},`,
+    'Thank you for reaching out. I appreciate your interest in connecting.',
+    'I’ve received your message and will get back to you shortly.',
+    'Looking forward to our conversation.',
+  ];
+  const sign = 'Best,\nDr. Gaurav Jain\nwww.gauravjain.us';
+  const note = 'You’re receiving this because this address was entered in the contact form on Dr. Gaurav Jain’s website. If that wasn’t you, you can ignore this email.';
+  const p = (s) => `<p style="margin:0 0 16px">${s}</p>`;
+  const html = '<div style="font:15px/1.6 Arial,sans-serif;color:#16215B;max-width:560px">' +
+    lines.map((l) => p(esc(l))).join('') +
+    p('Best,<br>Dr. Gaurav Jain<br><a href="https://www.gauravjain.us" style="color:#1F299C">www.gauravjain.us</a>') +
+    `<p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #E5E0D6;font-size:13px;color:#5F6496">${esc(note)}</p></div>`;
+  const r = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: FROM,
+      to: [f.email],
+      reply_to: TO,
+      subject: 'Thank you for reaching out',
+      text: `${lines.join('\n\n')}\n\n${sign}\n\n--\n${note}`,
       html,
     }),
   });
@@ -86,5 +127,11 @@ module.exports = async (req, res) => {
     else console.error(`${jobs[i][0]} failed:`, r.reason && r.reason.message);
   });
   if (!done.length) return res.status(502).json({ ok: false, error: 'send-failed' });
+
+  // The inquiry is safely recorded; now thank the visitor. A failure here is logged, not shown to them.
+  if (process.env.RESEND_API_KEY && process.env.CONTACT_CONFIRM !== 'off') {
+    try { await sendConfirmation(f); done.push('confirmation'); }
+    catch (e) { console.error('confirmation failed:', e && e.message); }
+  }
   return res.status(200).json({ ok: true, done });
 };
