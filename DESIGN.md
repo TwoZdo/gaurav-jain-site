@@ -463,3 +463,8 @@ Backup before this pass: .backup/*-v38c.*
 - Removed the "From Everyday Banking to Sophisticated Investments" products section (with the "Different products. Different customers." card) and the "Beyond the Product: Three Questions That Matter" framework section, at the client's request.
 - The dark/light alternation still holds: who I work with (light) → speaking (dark) → invite (light).
 - "Who I Work With" now has the id `#advisory`; the menu's Advisory link goes there, and About goes to the top of the page (the hero carries the bio line now). The footer links follow the same mapping. Their CSS and site.js code is left in place, unused.
+
+## v51 — Speaking section: client copy, portrait with the book
+- Speaking now uses the client's text: the lead "Fresh perspectives on marketing, positioning, and growth in financial services.", two paragraphs, and a static "Available formats" line (Keynotes · Executive Workshops · Guest Lectures · Leadership Sessions). The rotating formats dial is gone.
+- The button is green "Invite Dr. Jain to Speak" (was orange "Discuss a Workshop").
+- The photo is now the portrait with the book (`portrait-book.webp`), so the NYU Stern lecture photo appears only once, in "Who I Work With". Hard edges, as before.

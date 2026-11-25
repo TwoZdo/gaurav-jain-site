@@ -104,7 +104,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 | Cyan `#30D1FF` | Marks and script words on dark sections |
 | Periwinkle `#A3A9F5` | Highlighted words in the hero |
 | Orange `#D73D0D` | Buttons only, always with **white** text. This is the client's orange `#F25929` deepened so white text passes contrast. |
-| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book" and "Explore Synergies" buttons only, always with **navy** text. |
+| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book", "Explore Synergies" and "Invite Dr. Jain to Speak" (Speaking) buttons only, always with **navy** text. |
 | Muted text `#5F6496` | Secondary text |
 | Footer `#111A4C` | Footer background |
 

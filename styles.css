@@ -450,7 +450,7 @@ main, .foot { position: relative; z-index: 1; }
 .split-photo figcaption { position: absolute; left: 14px; bottom: 14px; background: var(--white); color: var(--ink); padding: 8px 12px; border-radius: 4px; }
 .hero .split-photo { aspect-ratio: auto; height: min(76svh, 760px); }
 .hero .split-photo img { object-position: 50% 38%; }
-.band--talks .split-photo img { object-position: 50% 40%; }
+.band--talks .split-photo img { object-position: 50% 30%; }
 #advisory { padding-bottom: calc(var(--sec) + 60px); }
 .skyline { left: var(--gut); width: min(520px, 40%); }
 .sess-h { margin-top: var(--sec); }
@@ -535,3 +535,8 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
   -webkit-mask-composite: source-in;
   mask: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent), linear-gradient(to bottom, transparent, #000 12%, #000 82%, transparent);
   mask-composite: intersect; }
+
+/* v51: Speaking copy from the client; the rotating formats dial is replaced by a static line. */
+.talk-formats { display: grid; gap: 8px; width: 100%; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.16); }
+.talk-formats .mono { color: var(--yellow); }
+.talk-formats-list { font: 500 clamp(1.05rem, 1.3vw, 1.2rem)/1.45 var(--sans); letter-spacing: -.01em; color: var(--on-dark); }
