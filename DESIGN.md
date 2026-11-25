@@ -525,3 +525,7 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v62 — Thank-you card after the contact form
 - After a successful send, the Get in Touch form is replaced in the same box by a card: deep-green tick (--green-ink #1F7A3F, about 5:1; bright --green is too faint as an icon), "Thank you for reaching out!", the received/appreciate line, and a muted "within 2 business days" note (client wording). The box keeps up to 480px of its height so the page does not lurch; focus moves to the card for screen readers. Errors keep the form and show the message as before.
+
+## v63 — Thank-you card wording and animation
+- Copy (client, 2026-11-25): the "within 2 business days" note is gone; the card now reads "Thank you for reaching out!" then "I appreciate your interest in connecting. I’ve received your message and will get back to you shortly."
+- Motion so the send feels done: the form fades up and out (0.28s, site.js waits for it), the green circle draws, then the tick, a thin ring pulses out once and the tick gives a small pop; heading and text rise in. Reduced motion: the finished card appears with no movement.

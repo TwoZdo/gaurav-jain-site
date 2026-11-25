@@ -188,11 +188,15 @@
             // page doesn't lurch (capped, so a long phone form doesn't leave a tall empty box), then show the card
             const done = form.querySelector('.form-done');
             form.style.minHeight = Math.min(form.offsetHeight, 480) + 'px';
-            form.reset();
-            form.classList.add('is-done');
-            done.hidden = false;
-            done.focus({ preventScroll: true });
-            done.scrollIntoView({ block: 'nearest', behavior: motion ? 'smooth' : 'auto' });
+            form.classList.add('is-leaving');
+            // v63: let the form fade out (styles.css) before the card animates in
+            setTimeout(() => {
+              form.reset();
+              form.classList.add('is-done');
+              done.hidden = false;
+              done.focus({ preventScroll: true });
+              done.scrollIntoView({ block: 'nearest', behavior: motion ? 'smooth' : 'auto' });
+            }, motion ? 280 : 0);
           } else if (j.error === 'invalid') {
             status.className = 'form-status err';
             status.textContent = 'Please check your name and email.';

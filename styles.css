@@ -615,11 +615,24 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .form.is-done { align-content: center; }
 .form.is-done > :not(.form-done) { display: none; }
 .form-done { display: grid; justify-items: center; gap: 12px; text-align: center; padding: clamp(8px, 2vw, 24px) 0; outline: none; }
-.form-done-ic { width: 40px; height: 40px; fill: none; stroke: var(--green-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 4px; }
+.form-done-ic { width: 56px; height: 56px; overflow: visible; fill: none; stroke: var(--green-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 8px; }
+.form-done-ic .ring { opacity: 0; stroke-width: 1.5; }
 .form-done-h { font: 600 clamp(1.25rem, 1.6vw, 1.5rem)/1.25 var(--sans); letter-spacing: -.02em; color: var(--ink); }
-.form-done-p { max-width: 34em; font-size: 16.5px; line-height: 1.55; color: var(--ink); }
-.form-done-note { font-size: 14.5px; color: var(--mute); }
+.form-done-p { max-width: 30em; font-size: 16.5px; line-height: 1.55; color: var(--ink); }
+/* v63: on send the form fades out (site.js waits for it), then the circle and tick draw, a ring pulses out
+   and the text rises in, so it's clear the message went. Reduced motion: the finished card, no movement. */
 @media (prefers-reduced-motion: no-preference) {
-  .form-done:not([hidden]) { animation: form-done-in .5s var(--out) both; }
-  @keyframes form-done-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .form.is-leaving > :not(.form-done) { opacity: 0; transform: translateY(-6px); transition: opacity .28s var(--ease), transform .28s var(--ease); }
+  .form-done:not([hidden]) .disc,
+  .form-done:not([hidden]) .tick { stroke-dasharray: 1; animation: done-draw .6s var(--out) .05s both; }
+  .form-done:not([hidden]) .tick { animation-duration: .4s; animation-delay: .5s; }
+  .form-done:not([hidden]) .ring { transform-box: fill-box; transform-origin: center; animation: done-ring 1s cubic-bezier(.2, .7, .3, 1) .75s both; }
+  .form-done:not([hidden]) .form-done-ic { animation: done-pop .45s var(--out) .8s both; }
+  .form-done:not([hidden]) .form-done-h,
+  .form-done:not([hidden]) .form-done-p { animation: done-rise .7s var(--out) .45s both; }
+  .form-done:not([hidden]) .form-done-p { animation-delay: .58s; }
+  @keyframes done-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes done-ring { from { opacity: .45; transform: scale(1); } to { opacity: 0; transform: scale(1.9); } }
+  @keyframes done-pop { 50% { transform: scale(1.08); } }
+  @keyframes done-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 }
