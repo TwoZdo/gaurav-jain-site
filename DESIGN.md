@@ -509,3 +509,7 @@ Backup before this pass: .backup/*-v38c.*
 
 ## v59 — Header role word twice as fast
 - Professor / Author / Advisor in the header now changes every 0.75s (was 1.5s), with a 0.18–0.2s slide (was 0.35–0.4s). Still off with reduced motion; hidden below 1180px.
+
+## v60 — Script font is now Mr Dafoe
+- The handwritten accent word in every section title (and "Marketing" in the hero) changed from Mrs Saint Delafield to Mr Dafoe (Google Fonts), at the client's request: a bolder, more confident brush-signature look.
+- Mr Dafoe is much heavier and taller at the same size, so the script word went from 1.6em to 1.2em of the title (1.05em in the hero) and its tilt from -5° to -3°. Colours are unchanged: royal on light sections, cyan on dark ones.
