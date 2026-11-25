@@ -582,3 +582,6 @@ body { --hb: var(--paper); --hex: var(--hex-light); }
 .pick input:checked::after { transform: scale(1); }
 .pick input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .fld input::placeholder, .fld textarea::placeholder { color: var(--mute); opacity: 1; }
+
+/* v56: script word in the hero headline ("Marketing"), sized for the large h1. */
+.hero-h .scr { font-size: 1.35em; top: .1em; margin: 0 .12em 0 .04em; }

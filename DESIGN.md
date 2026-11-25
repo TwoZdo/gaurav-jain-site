@@ -489,3 +489,9 @@ Backup before this pass: .backup/*-v38c.*
 - The form is now "Get in Touch": Name and Email (required), Organization (optional), "I'm interested in" as a vertical list of five round radio options (Speaking or keynote, Executive workshop, Advisory or consulting, Research collaboration, Other; none preselected), and an optional Message. The button is green "Send Message". "Discuss this session" links still pre-fill the message and now also tick "Speaking or keynote".
 - The form still has no backend: it validates and shows a thank-you, but nothing is sent yet.
 - Menu: "Book" renamed "The Book".
+
+## v56 — Script "Marketing" in the hero, Speaking photo melts, "Let's Connect"
+- Hero headline: "The *Marketing* of Financial Products." with "Marketing" in the handwritten script (cyan on navy), like the script word in each section title.
+- The "See talks & workshops" link under the hero button is removed.
+- The Speaking photo (portrait with the book) now fades into the navy at its edges (`photo-melt`).
+- The form button says "Let’s Connect" (green).

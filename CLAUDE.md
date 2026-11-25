@@ -105,7 +105,7 @@ Read `DESIGN.md` before any visual change. It records every decision and why it 
 | Cyan `#30D1FF` | Marks and script words on dark sections |
 | Periwinkle `#A3A9F5` | Highlighted words in the hero |
 | Orange `#D73D0D` | Buttons only, always with **white** text. This is the client's orange `#F25929` deepened so white text passes contrast. |
-| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book", "Explore Synergies" and "Invite Dr. Jain to Speak" (Speaking) buttons only, always with **navy** text. |
+| Bright green `#2BD46B` | "Schedule a Call" (header and hero), "Explore the Book", "Explore Synergies", "Invite Dr. Jain to Speak" (Speaking) and the form's "Let’s Connect" buttons only, always with **navy** text. |
 | Muted text `#5F6496` | Secondary text |
 | Footer `#111A4C` | Footer background |
 
@@ -113,12 +113,12 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 
 **Type**
 - Inter for everything.
-- The handwritten script (Mrs Saint Delafield, class `scr`) is used **only** as the first word of section titles. Nowhere else.
+- The handwritten script (Mrs Saint Delafield, class `scr`) is used **only** as the first word of section titles, plus "Marketing" in the hero headline. Nowhere else.
 - **No monospace fonts.** Small uppercase labels use the `.mono` class, which is Inter with spaced-out capitals.
 
 **Photos**
 - Each photo is a standalone picture in a two-column `.split` layout: hard edges, small radius.
-- No gradients, fades, overlays or colour filters on photos. Exceptions the client asked for: the hero photo and the "Who I Work With" photo fade into the background at their edges (class `photo-melt`).
+- No gradients, fades, overlays or colour filters on photos. Exceptions the client asked for: the hero, "Who I Work With" and Speaking photos fade into the background at their edges (class `photo-melt`).
 
 **Effects**
 - No blur on or behind text: no `filter: blur`, and no frosted or `backdrop-filter` surfaces.
