@@ -143,7 +143,7 @@ All colours are CSS variables in `:root` in `styles.css`. Use the variables; don
 | Path | What it is |
 |---|---|
 | `index.html`, `styles.css`, `site.js`, `assets/` | The live site |
-| `api/contact.js` | Receives the "Get in Touch" form, emails it via Resend and adds a row to a Google Sheet. Turned on by Vercel environment variables: `RESEND_API_KEY` (email; optional `CONTACT_TO`, `CONTACT_FROM`) and `SHEET_URL` + `SHEET_TOKEN` (sheet). Either one is enough. Never put keys or the token in the repo. With neither set, the form shows an error with the email address instead. |
+| `api/contact.js` | Receives the "Get in Touch" form, emails it via Resend and adds a row to a Google Sheet. Turned on by Vercel environment variables: `RESEND_API_KEY` (email; optional `CONTACT_TO`, `CONTACT_FROM`) and `SHEET_URL` + `SHEET_TOKEN` (sheet). Either one is enough. Never put keys or the token in the repo. With neither set, the form shows an error with the email address instead. A variable takes effect only on the next build: push a commit, or redeploy in Vercel. Status: `RESEND_API_KEY` was added in Vercel in Nov 2026; the sheet is not set up yet. |
 | `tools/google-sheet-script.gs` | The Apps Script pasted into the Google Sheet. Kept off the live site by `.vercelignore`. |
 | `DESIGN.md` | Design history and rules. Add a short entry when you make a meaningful design change. |
 | `PRODUCT.md` | Who the site is for and what it must do |
